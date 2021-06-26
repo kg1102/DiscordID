@@ -14,22 +14,20 @@ const DiscordDetails = () => {
         history.goBack();
     }
 
+    let [loading, setLoading] = useState(true);
+
+    const handleLoadingState = () => {
+        setLoading(!loading);
+    }
+
     useEffect(()=> {
         const message = document.querySelectorAll("#message")[0];
         const username = document.querySelectorAll('#username')[0];
         const avatar = document.querySelectorAll('#avatar')[0];
-        let [loading, setLoading] = useState(true);
-
-
-        const handleLoadingState = () => {
-            setLoading(!loading);
-        }
-    
         axios.get(`https://searchdiscordid.herokuapp.com/user/${params.DiscordID}`)
             .then((res)=>{
                 username.innerHTML = `<b>${res.data.user.username}<span style="color:rgb(183,185,188)">#${res.data.user.tag}</span></b>`;
                 avatar.innerHTML = `<img src="https://cdn.discordapp.com/avatars/${res.data.user.id}/${res.data.user.avatar}.png" alt="Avatar de ${res.data.user.username}" class="info-avatar"/>`;
-                handleLoadingState();
             }).catch((error)=>{
                 console.log(error.name);
                 if(error.name === "Error"){
