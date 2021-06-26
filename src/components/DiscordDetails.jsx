@@ -15,15 +15,15 @@ const DiscordDetails = () => {
         history.goBack();
     }
 
-    const handleLoadingState = () => {
-        setLoading(!loading);
-    }
-
     useEffect(()=> {
         const message = document.querySelectorAll("#message")[0];
         const username = document.querySelectorAll('#username')[0];
         const avatar = document.querySelectorAll('#avatar')[0];
-        // let time = performance.now();
+
+        const handleLoadingState = () => {
+            setLoading(!loading);
+        }
+    
         axios.get(`https://searchdiscordid.herokuapp.com/user/${params.DiscordID}`)
             .then((res)=>{
                 username.innerHTML = `<b>${res.data.user.username}<span style="color:rgb(183,185,188)">#${res.data.user.tag}</span></b>`;
