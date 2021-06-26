@@ -5,7 +5,7 @@ import axios from 'axios';
 import './DiscordDetails.css';
 import {IoIosContact} from "react-icons/io";
 import { SyncLoader } from 'react-spinners';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const DiscordDetails = () => {
     const params = useParams();
