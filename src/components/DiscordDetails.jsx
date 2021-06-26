@@ -1,11 +1,10 @@
-import React, {useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import {useHistory, useParams} from "react-router-dom";
 import Button from './Button';
 import axios from 'axios';
 import './DiscordDetails.css';
 import {IoIosContact} from "react-icons/io";
 import { SyncLoader } from 'react-spinners';
-import { useState, useEffect } from 'react';
 
 const DiscordDetails = () => {
     const params = useParams();
