@@ -9,7 +9,6 @@ import { SyncLoader } from 'react-spinners';
 const DiscordDetails = () => {
     const params = useParams();
     const history = useHistory();
-    let [loading, setLoading] = useState(true);
 
     const handleBackButtonClick = () => {
         history.goBack();
@@ -19,6 +18,8 @@ const DiscordDetails = () => {
         const message = document.querySelectorAll("#message")[0];
         const username = document.querySelectorAll('#username')[0];
         const avatar = document.querySelectorAll('#avatar')[0];
+        let [loading, setLoading] = useState(true);
+
 
         const handleLoadingState = () => {
             setLoading(!loading);
