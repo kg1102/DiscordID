@@ -1,0 +1,18 @@
+.sc-button {
+    background-color: rgb(98, 153, 255);
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 12px;
+    width: 99%;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.sc-button:hover {
+    height: 40px;
+    transform: scale(1.1);
+}
