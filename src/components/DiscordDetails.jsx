@@ -16,9 +16,9 @@ const DiscordDetails = () => {
 
     let [loading, setLoading] = useState(true);
 
-    const handleLoadingState = () => {
-        setLoading(!loading);
-    }
+    // const handleLoadingState = () => {
+    //     setLoading(!loading);
+    // }
 
     useEffect(()=> {
         const message = document.querySelectorAll("#message")[0];
