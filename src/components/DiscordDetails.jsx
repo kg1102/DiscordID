@@ -14,7 +14,7 @@ const DiscordDetails = () => {
         history.goBack();
     }
 
-    let [loading, setLoading] = useState(true);
+    let [loading] = useState(true);
 
     // const handleLoadingState = () => {
     //     setLoading(!loading);
